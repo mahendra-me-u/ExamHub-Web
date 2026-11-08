@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-tertiary":"#ffffff","error-container":"#ffdad6","on-error-container":"#93000a","surface":"#faf8ff","primary-container":"#7c3aed","on-secondary-fixed-variant":"#003ea8","on-primary-fixed-variant":"#5a00c6","primary-fixed":"#eaddff","nta-answered-marked":"#F59E0B","background":"#faf8ff","inverse-on-surface":"#eef0ff","surface-container-highest":"#dae2fd","surface-container":"#eaedff","inverse-primary":"#d2bbff","on-tertiary-fixed-variant":"#005049","tertiary-fixed-dim":"#6bd8cb","surface-container-low":"#f2f3ff","error":"#ba1a1a","on-surface-variant":"#4a4455","surface-dim":"#d2d9f4","on-secondary-fixed":"#00174b","tertiary":"#005952","surface-cockpit":"#F8FAFC","on-primary-container":"#ede0ff","secondary":"#0051d5","nta-not-answered":"#EF4444","on-tertiary-fixed":"#00201d","surface-tint":"#732ee4","secondary-fixed":"#dbe1ff","tertiary-fixed":"#89f5e7","surface-variant":"#dae2fd","surface-container-high":"#e2e7ff","telemetry-muted":"#64748B","on-secondary-container":"#fefcff","on-primary-fixed":"#25005a","on-error":"#ffffff","surface-container-lowest":"#ffffff","on-surface":"#131b2e","secondary-fixed-dim":"#b4c5ff","surface-bright":"#faf8ff","nta-not-visited":"#94A3B8","nta-marked-review":"#8B5CF6","border-grid":"#E2E8F0","primary":"#630ed4","tertiary-container":"#00746a","outline":"#7b7487","on-background":"#131b2e","on-secondary":"#ffffff","outline-variant":"#ccc3d8","inverse-surface":"#283044","secondary-container":"#316bf3","primary-fixed-dim":"#d2bbff","on-primary":"#ffffff","nta-answered":"#10B981","on-tertiary-container":"#8df9ea"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"margin-desktop":"2rem","space-md":"1rem","margin":"1rem","gutter-desktop":"1.5rem","space-xl":"2.5rem","space-sm":"0.5rem","gutter":"1rem","space-lg":"1.5rem","space-xs":"0.25rem"},"fontFamily":{"body-md":["Geist"],"display-lg":["Space Grotesk"],"label-meta":["Space Grotesk"],"body-sm":["Geist"],"headline-lg":["Space Grotesk"],"body-lg":["Geist"],"headline-lg-mobile":["Space Grotesk"],"headline-md":["Space Grotesk"],"label-code":["Space Grotesk"]},"fontSize":{"body-md":["1rem",{"lineHeight":"1.5rem","letterSpacing":"0em","fontWeight":"400"}],"display-lg":["3rem",{"lineHeight":"3.5rem","letterSpacing":"-0.03em","fontWeight":"700"}],"label-meta":["0.875rem",{"lineHeight":"1.25rem","letterSpacing":"0.02em","fontWeight":"500"}],"body-sm":["0.875rem",{"lineHeight":"1.25rem","letterSpacing":"0.01em","fontWeight":"400"}],"headline-lg":["2rem",{"lineHeight":"2.5rem","letterSpacing":"-0.02em","fontWeight":"600"}],"body-lg":["1.125rem",{"lineHeight":"1.75rem","letterSpacing":"0em","fontWeight":"400"}],"headline-lg-mobile":["1.5rem",{"lineHeight":"2rem","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-md":["1.25rem",{"lineHeight":"1.75rem","letterSpacing":"-0.01em","fontWeight":"600"}],"label-code":["0.75rem",{"lineHeight":"1rem","letterSpacing":"0.08em","fontWeight":"700"}]}}}};</script></head><body class="bg-surface font-body-md text-body-md text-on-surface"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between overflow-y-auto"><div class="flex flex-col"><div class="h-20 px-space-md flex items-center gap-space-sm bg-surface-container-lowest"><img alt="ExamHub Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBc_IeKI05rwxw-2om_AGK53hAAXKq0x_i9V--cnBgM5o9wEonP-mChl8DJL0dEuVx7NypmDGaAzKJn39B5XKOJwjaGljozt_B48BqbzdUAgZmzFRApMAudxercH2k0y--Ccok3ij6gxKSw-VmzFbkeJxk4eWqG0t7jcw6ODwIXBh33HFsPzCIcDRSLaRIXmsiIgdhw_otwMiWdG4mQB_tqhKtJ8hfx4tWfRRuLjbw"/><div class="flex flex-col justify-center min-w-0"><span class="font-headline-md text-headline-md text-primary tracking-tight font-bold leading-none">ExamHub</span><span class="font-label-code text-label-code text-telemetry-muted tracking-wider uppercase mt-space-xs truncate">Practice. Prepare. Perform.</span></div></div><div class="px-space-md py-space-sm"><div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-space-xs"><div class="flex items-center justify-between"><span class="font-label-code text-label-code uppercase text-telemetry-muted">Live Cockpit</span><span class="flex h-2 w-2 relative"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-nta-answered opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-nta-answered"></span></span></div><div class="flex items-center justify-between font-label-meta text-label-meta"><span class="text-on-surface-variant font-medium">Daily Goal</span><span class="font-label-code text-label-code font-bold text-primary">42 / 60 MCQs</span></div><div class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden"><div class="bg-primary h-full rounded-full w-[70%]"></div></div></div></div><nav class="flex flex-col gap-space-xs px-space-md py-space-sm" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-lg"><div class="pt-space-xs pb-space-xs"><span class="font-label-code text-label-code uppercase text-telemetry-muted tracking-widest px-space-sm">Main</span></div><a aria-current="page" class="flex items-center gap-space-sm px-space-sm py-space-sm transition-colors bg-primary-container text-on-primary-container font-semibold rounded-lg" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[1.25rem]">grid_view</span><span>Dashboard</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant font-label-meta text-label-meta hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="quick-test" href="#"><span class="material-symbols-outlined text-[1.25rem]">bolt</span><span>Quick Test</span><span class="ml-auto bg-primary-fixed text-on-primary-fixed font-label-code text-label-code px-1.5 py-0.5 rounded">SPEED</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant font-label-meta text-label-meta hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="competitive-exams" href="#"><span class="material-symbols-outlined text-[1.25rem]">school</span><span>Competitive Exams</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant font-label-meta text-label-meta hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="ncsm-learning" href="#"><span class="material-symbols-outlined text-[1.25rem]">menu_book</span><span>NCSM Learning</span></a><div class="pt-space-md pb-space-xs"><span class="font-label-code text-label-code uppercase text-telemetry-muted tracking-widest px-space-sm">Performance</span></div><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant font-label-meta text-label-meta hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="my-results" href="#"><span class="material-symbols-outlined text-[1.25rem]">fact_check</span><span>My Results</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant font-label-meta text-label-meta hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="analytics" href="#"><span class="material-symbols-outlined text-[1.25rem]">analytics</span><span>Analytics</span><span class="ml-auto bg-surface-container-highest text-secondary font-label-code text-label-code px-1.5 py-0.5 rounded">98.4%</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant font-label-meta text-label-meta hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="saved-questions" href="#"><span class="material-symbols-outlined text-[1.25rem]">archive</span><span>Saved Questions</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant font-label-meta text-label-meta hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="bookmarks" href="#"><span class="material-symbols-outlined text-[1.25rem]">bookmark</span><span>Bookmarks</span></a><div class="pt-space-md pb-space-xs"><span class="font-label-code text-label-code uppercase text-telemetry-muted tracking-widest px-space-sm">Admin Portal</span></div><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant font-label-meta text-label-meta hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="admin-overview" href="#"><span class="material-symbols-outlined text-[1.25rem]">shield_person</span><span>Admin Overview</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant font-label-meta text-label-meta hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="exam-and-paper-manager" href="#"><span class="material-symbols-outlined text-[1.25rem]">assignment</span><span>Exam &amp; Paper Manager</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant font-label-meta text-label-meta hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="question-bank" href="#"><span class="material-symbols-outlined text-[1.25rem]">database</span><span>Question Bank</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant font-label-meta text-label-meta hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="mock-test-studio" href="#"><span class="material-symbols-outlined text-[1.25rem]">tune</span><span>Mock Test Studio</span></a></nav></div><div class="p-space-md bg-surface-container-lowest"><div class="p-space-sm rounded-lg bg-surface-container flex items-center justify-between"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-primary text-[1.25rem]">terminal</span><div class="flex flex-col"><span class="font-label-code text-label-code font-bold text-on-surface">EXAM-SIM v4.2</span><span class="font-label-code text-label-code text-telemetry-muted">TCS-iON Engine</span></div></div><span class="font-label-code text-label-code text-nta-answered font-bold">ONLINE</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-20 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-lg gap-space-md"><div class="flex items-center gap-space-md flex-1 min-w-0"><div class="flex items-center gap-space-xs font-label-meta text-label-meta text-telemetry-muted whitespace-nowrap"><span class="hover:text-on-surface cursor-pointer">ExamHub</span><span class="material-symbols-outlined text-[0.875rem]">chevron_right</span><span class="text-primary font-semibold truncate">Aspirant Portal</span></div><div class="relative flex-1 max-w-lg hidden md:block"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-telemetry-muted text-[1.25rem]">search</span><input class="w-full pl-10 pr-4 py-2 bg-surface-container-lowest rounded-lg font-body-sm text-body-sm text-on-surface placeholder:text-telemetry-muted focus:outline-none focus:ring-1 focus:ring-primary shadow-[0_1px_4px_rgba(0,0,0,0.02)]" placeholder="Search exams, subjects, papers, topics..." type="text"/></div></div><div class="flex items-center gap-space-md"><div class="hidden xl:flex items-center gap-space-xs px-space-sm py-1.5 rounded-full bg-surface-container-low"><span class="material-symbols-outlined text-secondary text-[1rem]">flag</span><span class="font-label-code text-label-code text-secondary font-bold">TARGET:</span><span class="font-label-meta text-label-meta text-on-surface font-semibold">SSC CGL &amp; WBCS 2026</span></div><a class="inline-flex items-center gap-space-xs px-space-md py-2 rounded-lg bg-primary-container text-on-primary-container font-label-meta text-label-meta uppercase tracking-wider font-semibold hover:bg-primary transition-colors hover:text-on-primary shadow-sm" data-path="quick-test" href="#"><span class="material-symbols-outlined text-[1.125rem]">play_arrow</span><span>Quick Test</span></a><div class="relative flex items-center"><button class="relative p-2 rounded-lg bg-surface-container-lowest text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors"><span class="material-symbols-outlined text-[1.375rem]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 bg-error rounded-full ring-2 ring-surface-container-lowest"></span></button></div><div class="flex items-center gap-space-xs p-1 rounded-lg bg-surface-container-low"><button class="px-2.5 py-1 rounded font-label-code text-label-code font-bold bg-surface-container-lowest text-primary shadow-sm">STUDENT</button><button class="px-2.5 py-1 rounded font-label-code text-label-code font-semibold text-telemetry-muted hover:text-on-surface transition-colors">ADMIN</button></div><div class="flex items-center gap-space-sm pl-space-xs bg-surface-container-lowest py-1.5 px-space-sm rounded-full shadow-[0_1px_4px_rgba(0,0,0,0.02)]"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCe8jeVXylWPdcPcnTig8_6VQNTCEEaLkCtuFa19JUWUtPXYC_OIJEhm6ZtuuLFJ7kdeN2KFw1jbBCjIMGWui6r-cUmbtI0DUaO_rwmJFtoMPErFRXfvGgd1SHTeFbCJZL3X5E22qbe3NVvrtQ5UFDxiX14uHrlCRXft7ydtLIJtqUgujY5AtApC5jxFAGwa31a8tPXLWTeUwEDUiUNqCVHvdsMZsUeIoOj7IoGhdU"/><div class="flex flex-col text-left"><div class="flex items-center gap-space-xs"><span class="font-label-meta text-label-meta font-semibold text-on-surface leading-none">Priya Sharma</span><span class="font-label-code text-label-code text-telemetry-muted font-normal">• Aspirant</span></div><div class="flex items-center gap-space-sm mt-space-xs"><span class="font-label-code text-label-code font-bold text-secondary">RANK #142</span><span class="font-label-code text-label-code text-nta-answered-marked font-bold flex items-center gap-0.5"><span class="material-symbols-outlined text-[0.875rem]">local_fire_department</span>18D STREAK</span></div></div></div></div></header><main class="relative w-full pt-20 px-space-lg pb-space-xl bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Atmospheric Glow Backdrop -->
+<div class="relative w-full overflow-hidden">
+<div class="absolute -top-32 -left-32 w-96 h-96 bg-primary-container/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute top-20 right-0 w-80 h-80 bg-secondary/10 rounded-full blur-3xl pointer-events-none"></div>
+<!-- 1. WELCOME HERO BANNER -->
+<div class="relative bg-surface-container-lowest rounded-2xl shadow-sm p-space-lg mb-space-lg">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs max-w-2xl">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-label-code text-label-code font-bold uppercase tracking-wider">
+<span class="material-symbols-outlined text-[0.875rem]">verified</span>
+              Aspirant Cockpit
+            </span>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label-meta text-label-meta font-medium">
+<span class="material-symbols-outlined text-[0.875rem] text-secondary">gps_fixed</span>
+              Target: SSC CGL Tier 1 &amp; WBCS 2026
+            </span>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-low text-nta-answered-marked font-label-code text-label-code font-bold">
+<span class="material-symbols-outlined text-[1rem]">local_fire_department</span>
+              18 DAYS STREAK
+            </span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface font-semibold tracking-tight mt-1">
+            Welcome back, <span class="text-primary font-bold">Priya!</span> Ready for today's mock?
+          </h1>
+<p class="font-body-md text-body-md text-telemetry-muted italic">
+            “Consistency transforms ordinary drills into extraordinary ranks. Small gains compound daily.”
+          </p>
+</div>
+<!-- Candidate Cockpit Capsule -->
+<div class="flex items-center gap-space-md p-space-sm rounded-xl bg-surface-cockpit shadow-sm self-start lg:self-auto min-w-[280px]">
+<div class="relative">
+<img class="w-14 h-14 rounded-xl object-cover shadow-sm" data-alt="Close up sharp portrait photograph of a confident 24 year old Indian female student wearing sleek modern glasses smiling faintly against a clean slate academic tech background bathed in soft violet rim light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDb7wUkADLPNEYDSzqywhtnu5uGzjPX7D4KyL75CuS6OZcLyBzLxmnJLLqINXqFcrystjwWyd0Yb4EyjOYZpYR_SQ6y6o8Pqih2xs078lVdXRgSxFHy1IFahpiV1cIHQZDQjSRo-KXVmj6gJ5gTjJVb-WorypofVOJ_zXhsIWLffZdKlBGmPArrD7r1bqJjF4HLChWE0w1i3dBMyBAO99O2oto8IBEcWKn0jP6A9CM"/>
+<span class="absolute -bottom-1 -right-1 flex h-4 w-4 items-center justify-center rounded-full bg-nta-answered text-white text-[10px] font-bold">✓</span>
+</div>
+<div class="flex flex-col justify-center min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-label-meta text-label-meta font-bold text-on-surface truncate">Priya Sharma</span>
+<span class="font-label-code text-label-code px-1.5 py-0.5 rounded bg-surface-container-highest text-secondary font-bold">PRO</span>
+</div>
+<span class="font-label-code text-label-code text-telemetry-muted mt-0.5">ID: EX-2026-9042</span>
+<div class="flex items-center gap-2 mt-1">
+<span class="font-label-code text-label-code text-primary font-bold">AIR #142</span>
+<span class="text-telemetry-muted text-[10px]">•</span>
+<span class="font-label-code text-label-code text-secondary font-semibold">Tier-1 Cohort</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- 2. FOUR KEY DASHBOARD KPI STAT CARDS -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md mb-space-xl">
+<!-- KPI 1 -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-md shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-code text-label-code uppercase tracking-wider text-telemetry-muted">Tests Attempted</span>
+<span class="w-8 h-8 rounded-lg bg-surface-container-low flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[1.25rem]">fact_check</span>
+</span>
+</div>
+<div class="mt-space-sm">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-display-lg text-headline-lg font-bold text-on-surface">48</span>
+<span class="font-label-meta text-label-meta text-telemetry-muted">tests</span>
+</div>
+<div class="flex items-center gap-1 mt-1 text-nta-answered font-label-code text-label-code font-bold">
+<span class="material-symbols-outlined text-[0.875rem]">trending_up</span>
+<span>+6 this week</span>
+<span class="text-telemetry-muted font-normal ml-1">(Pacing on track)</span>
+</div>
+</div>
+</div>
+<!-- KPI 2 -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-md shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-code text-label-code uppercase tracking-wider text-telemetry-muted">Questions Solved</span>
+<span class="w-8 h-8 rounded-lg bg-surface-container-low flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[1.25rem]">psychology</span>
+</span>
+</div>
+<div class="mt-space-sm">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-display-lg text-headline-lg font-bold text-on-surface">2,840</span>
+<span class="font-label-meta text-label-meta text-telemetry-muted">MCQs</span>
+</div>
+<div class="flex items-center gap-2 mt-1">
+<div class="flex-1 bg-surface-container-high h-1.5 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full w-[78.4%]"></div>
+</div>
+<span class="font-label-code text-label-code font-bold text-secondary">78.4% Acc.</span>
+</div>
+</div>
+</div>
+<!-- KPI 3 -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-md shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-code text-label-code uppercase tracking-wider text-telemetry-muted">Average Score</span>
+<span class="w-8 h-8 rounded-lg bg-surface-container-low flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[1.25rem]">speed</span>
+</span>
+</div>
+<div class="mt-space-sm">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-display-lg text-headline-lg font-bold text-on-surface">142.5</span>
+<span class="font-label-meta text-label-meta text-telemetry-muted">/ 200</span>
+</div>
+<div class="flex items-center gap-1 mt-1 text-tertiary-container font-label-code text-label-code font-bold">
+<span class="material-symbols-outlined text-[0.875rem]">social_leaderboard</span>
+<span>Percentile: 94.2%</span>
+<span class="text-telemetry-muted font-normal ml-0.5">(Top 6%)</span>
+</div>
+</div>
+</div>
+<!-- KPI 4 -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-md shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-code text-label-code uppercase tracking-wider text-telemetry-muted">Personal Best</span>
+<span class="w-8 h-8 rounded-lg bg-surface-container-low flex items-center justify-center text-nta-answered-marked">
+<span class="material-symbols-outlined text-[1.25rem]">military_tech</span>
+</span>
+</div>
+<div class="mt-space-sm">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-display-lg text-headline-lg font-bold text-on-surface">186.0</span>
+<span class="font-label-meta text-label-meta text-telemetry-muted">/ 200</span>
+</div>
+<div class="flex items-center gap-1 mt-1 text-on-surface-variant font-label-code text-label-code truncate">
+<span class="material-symbols-outlined text-[0.875rem] text-nta-answered-marked">emoji_events</span>
+<span class="font-bold text-on-surface">SSC CGL Mock #12</span>
+<span class="text-telemetry-muted">(Tier-1)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- SECTION TITLE & CONSOLE BADGE -->
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-6 bg-primary rounded-full"></span>
+<h2 class="font-headline-md text-headline-md font-semibold text-on-surface">
+          Primary Examination Portals
+        </h2>
+</div>
+<span class="font-label-code text-label-code text-telemetry-muted uppercase tracking-wider hidden sm:inline-block">
+        3 Specialized Engines Connected
+      </span>
+</div>
+<!-- 3. MAIN EXAMINATION CATEGORIES: EXACTLY THREE PROMINENT PRIMARY CARDS -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-space-lg mb-space-xl items-stretch">
+<!-- CARD 1: QUICK TEST ('Instant MCQ Practice') -->
+<div class="relative bg-surface-container-lowest rounded-2xl shadow-sm hover:shadow-md transition-all p-space-lg flex flex-col justify-between overflow-hidden">
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-full pointer-events-none"></div>
+<div>
+<!-- Top Badges -->
+<div class="flex items-center justify-between mb-space-sm">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-label-code text-label-code font-bold uppercase tracking-wider">
+<span class="material-symbols-outlined text-[0.875rem]">bolt</span>
+              Fast &amp; Focused
+            </span>
+<span class="font-label-code text-label-code text-telemetry-muted font-bold">MODE 01</span>
+</div>
+<h3 class="font-headline-md text-headline-md font-bold text-on-surface flex items-center gap-2">
+            Quick Test
+          </h3>
+<span class="font-label-code text-label-code text-primary uppercase tracking-wider font-semibold block mt-0.5">
+            Instant MCQ Practice
+          </span>
+<p class="font-body-sm text-body-sm text-telemetry-muted mt-space-xs">
+            Instant practice without navigating complex trees. Random generation with customizable speed parameters.
+          </p>
+<!-- Interactive Controls Preview -->
+<div class="mt-space-md p-space-sm rounded-xl bg-surface-container-low flex flex-col gap-space-sm">
+<!-- Question Count Pills -->
+<div class="flex flex-col gap-1">
+<span class="font-label-code text-label-code uppercase text-telemetry-muted font-bold">Select Question Count</span>
+<div class="grid grid-cols-4 gap-1.5" id="quickTestCountGroup">
+<button class="py-1.5 rounded-lg bg-surface-container-lowest text-on-surface font-label-code text-label-code font-bold text-center hover:bg-surface-container-high transition-colors" onclick="setCount(10, this)" type="button">10 Qs</button>
+<button class="py-1.5 rounded-lg bg-primary-container text-on-primary-container font-label-code text-label-code font-bold text-center" onclick="setCount(20, this)" type="button">20 Qs</button>
+<button class="py-1.5 rounded-lg bg-surface-container-lowest text-on-surface font-label-code text-label-code font-bold text-center hover:bg-surface-container-high transition-colors" onclick="setCount(30, this)" type="button">30 Qs</button>
+<button class="py-1.5 rounded-lg bg-surface-container-lowest text-on-surface font-label-code text-label-code font-bold text-center hover:bg-surface-container-high transition-colors" onclick="setCount(50, this)" type="button">50 Qs</button>
+</div>
+</div>
+<!-- Difficulty Pills -->
+<div class="flex flex-col gap-1">
+<span class="font-label-code text-label-code uppercase text-telemetry-muted font-bold">Difficulty Profile</span>
+<div class="grid grid-cols-3 gap-1.5" id="quickTestDiffGroup">
+<button class="py-1 rounded-lg bg-surface-container-lowest text-nta-answered font-label-code text-label-code font-bold hover:bg-surface-container-high transition-colors" onclick="setDiff('Easy', this)" type="button">Easy</button>
+<button class="py-1 rounded-lg bg-surface-container-highest text-secondary font-label-code text-label-code font-bold" onclick="setDiff('Medium', this)" type="button">Medium</button>
+<button class="py-1 rounded-lg bg-surface-container-lowest text-nta-not-answered font-label-code text-label-code font-bold hover:bg-surface-container-high transition-colors" onclick="setDiff('Hard', this)" type="button">Hard</button>
+</div>
+</div>
+<!-- Subject Selector -->
+<div class="flex flex-col gap-1">
+<span class="font-label-code text-label-code uppercase text-telemetry-muted font-bold">Target Pool</span>
+<div class="relative">
+<select class="w-full bg-surface-container-lowest text-on-surface font-body-sm text-body-sm py-2 px-3 rounded-lg appearance-none cursor-pointer focus:outline-none focus:bg-surface-container-high" id="quickSubjectSelect">
+<option>All Subjects Combined (Shuffle)</option>
+<option>Quantitative Aptitude (Arithmetic &amp; Adv)</option>
+<option>General Intelligence &amp; Reasoning</option>
+<option>General Awareness (Polity &amp; History)</option>
+<option>English Language &amp; Comprehension</option>
+</select>
+<span class="material-symbols-outlined text-[1.125rem] text-telemetry-muted absolute right-2.5 top-1/2 -translate-y-1/2 pointer-events-none">expand_more</span>
+</div>
+</div>
+<!-- Instant Toggle Mode -->
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[1.125rem] text-primary">lightbulb</span>
+<span class="font-label-meta text-label-meta text-on-surface font-medium">Instant Solution Mode</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" id="instantModeToggle" type="checkbox"/>
+<div class="w-9 h-5 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary-container"></div>
+</label>
+</div>
+</div>
+</div>
+<!-- Action Button -->
+<div class="mt-space-md pt-space-xs">
+<button class="w-full py-3 px-4 rounded-xl bg-gradient-to-r from-primary to-primary-container text-on-primary font-label-meta text-label-meta uppercase tracking-wider font-semibold shadow-md hover:brightness-110 active:scale-[0.99] transition-all flex items-center justify-center gap-2" onclick="startInstantMock()" type="button">
+<span class="material-symbols-outlined text-[1.25rem]">bolt</span>
+<span>Start Instant Practice Now</span>
+</button>
+<div class="flex items-center justify-center gap-2 mt-2">
+<span class="w-1.5 h-1.5 rounded-full bg-nta-answered"></span>
+<span class="font-label-code text-label-code text-telemetry-muted">Over 1,200 active questions in cache</span>
+</div>
+</div>
+</div>
+<!-- CARD 2: COMPETITIVE EXAMS ('Targeted Exam Prep & PYQ Hub') -->
+<div class="relative bg-surface-container-lowest rounded-2xl shadow-sm hover:shadow-md transition-all p-space-lg flex flex-col justify-between overflow-hidden">
+<div class="absolute top-0 right-0 w-32 h-32 bg-secondary/5 rounded-bl-full pointer-events-none"></div>
+<div>
+<!-- Top Badges -->
+<div class="flex items-center justify-between mb-space-sm">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-code text-label-code font-bold uppercase tracking-wider">
+<span class="material-symbols-outlined text-[0.875rem]">school</span>
+              Comprehensive Syllabus
+            </span>
+<span class="font-label-code text-label-code text-secondary font-bold">450+ VERIFIED</span>
+</div>
+<h3 class="font-headline-md text-headline-md font-bold text-on-surface">
+            Competitive Exams
+          </h3>
+<span class="font-label-code text-label-code text-secondary uppercase tracking-wider font-semibold block mt-0.5">
+            Targeted Exam Prep &amp; PYQ Hub
+          </span>
+<p class="font-body-sm text-body-sm text-telemetry-muted mt-space-xs">
+            Complete syllabus mapped for SSC, Railways &amp; State PSC with verified previous papers and exact test interfaces.
+          </p>
+<!-- Sub-Cards Breakdown Inside -->
+<div class="mt-space-md flex flex-col gap-space-sm">
+<!-- Sub-Card A: Practice (Topic-wise & Exam-wise) -->
+<div class="p-space-sm rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors cursor-pointer group" onclick="selectCompetitiveTab('practice')">
+<div class="flex items-center justify-between mb-1.5">
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded-md bg-secondary-container text-on-secondary-container flex items-center justify-center font-label-code text-label-code font-bold">A</span>
+<span class="font-label-meta text-label-meta font-bold text-on-surface group-hover:text-secondary transition-colors">Exam &amp; Topic Practice</span>
+</div>
+<span class="material-symbols-outlined text-telemetry-muted group-hover:translate-x-0.5 transition-transform text-[1.125rem]">arrow_forward</span>
+</div>
+<div class="flex flex-wrap gap-1 mt-1">
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest text-on-surface font-label-code text-label-code font-semibold">SSC (CGL, CHSL, MTS, CPO)</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest text-on-surface font-label-code text-label-code font-semibold">RRB (NTPC, Group D, ALP)</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest text-on-surface font-label-code text-label-code font-semibold">WB (WBCS, Clerkship, Police)</span>
+</div>
+</div>
+<!-- Sub-Card B: Previous Exam Review (PYQ Papers) -->
+<div class="p-space-sm rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors cursor-pointer group" onclick="selectCompetitiveTab('pyq')">
+<div class="flex items-center justify-between mb-1.5">
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded-md bg-surface-container-highest text-secondary flex items-center justify-center font-label-code text-label-code font-bold">B</span>
+<span class="font-label-meta text-label-meta font-bold text-on-surface group-hover:text-secondary transition-colors">Verified PYQ Archive</span>
+</div>
+<span class="inline-flex items-center gap-0.5 px-1.5 py-0.5 rounded bg-nta-answered/10 text-nta-answered font-label-code text-label-code font-bold">
+                  100% SOLUTIONS
+                </span>
+</div>
+<p class="font-body-sm text-body-sm text-telemetry-muted line-clamp-1 mb-1.5">
+                Original shift papers with sectional cut-offs &amp; rank simulations.
+              </p>
+<div class="flex items-center gap-1.5">
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest font-label-code text-label-code text-telemetry-muted font-bold">2026 Shift</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest font-label-code text-label-code text-telemetry-muted font-bold">2025 Tier-1/2</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest font-label-code text-label-code text-telemetry-muted font-bold">2024 PYQ</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest font-label-code text-label-code text-telemetry-muted font-bold">2023 Archive</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Action Button -->
+<div class="mt-space-md pt-space-xs">
+<button class="w-full py-3 px-4 rounded-xl bg-secondary text-on-secondary font-label-meta text-label-meta uppercase tracking-wider font-semibold shadow-md hover:bg-secondary/95 active:scale-[0.99] transition-all flex items-center justify-center gap-2" type="button">
+<span class="material-symbols-outlined text-[1.25rem]">travel_explore</span>
+<span>Explore Competitive Exams</span>
+</button>
+<div class="flex items-center justify-between text-telemetry-muted font-label-code text-label-code mt-2 px-1">
+<span>Includes Bilingual Hindi/Bengali/English</span>
+<span class="text-secondary font-bold">Updated Yesterday</span>
+</div>
+</div>
+</div>
+<!-- CARD 3: NCSM ('Specialized Learning & Curated Mocks') -->
+<div class="relative bg-surface-container-lowest rounded-2xl shadow-sm hover:shadow-md transition-all p-space-lg flex flex-col justify-between overflow-hidden">
+<div class="absolute top-0 right-0 w-32 h-32 bg-tertiary/5 rounded-bl-full pointer-events-none"></div>
+<div>
+<!-- Top Badges -->
+<div class="flex items-center justify-between mb-space-sm">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-code text-label-code font-bold uppercase tracking-wider">
+<span class="material-symbols-outlined text-[0.875rem]">science</span>
+              Curriculum &amp; Mocks
+            </span>
+<span class="font-label-code text-label-code text-tertiary font-bold">2025-26 ACTIVE</span>
+</div>
+<h3 class="font-headline-md text-headline-md font-bold text-on-surface">
+            NCSM Learning
+          </h3>
+<span class="font-label-code text-label-code text-tertiary uppercase tracking-wider font-semibold block mt-0.5">
+            Council Museums &amp; Specialized Cadre
+          </span>
+<p class="font-body-sm text-body-sm text-telemetry-muted mt-space-xs">
+            Official curriculum modules for National Council of Science Museums, technical curator &amp; allied state exams.
+          </p>
+<!-- Sub-sections preview -->
+<div class="mt-space-md flex flex-col gap-2">
+<!-- Section A -->
+<div class="p-2.5 rounded-xl bg-surface-container-low flex items-center justify-between hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-2.5">
+<span class="w-6 h-6 rounded-md bg-tertiary/10 text-tertiary flex items-center justify-center font-label-code text-label-code font-bold">01</span>
+<div>
+<span class="font-label-meta text-label-meta font-bold text-on-surface block leading-tight">Subject-wise Practice</span>
+<span class="font-label-code text-label-code text-telemetry-muted">12 Academic Subjects &amp; Chapter Banks</span>
+</div>
+</div>
+<span class="font-label-code text-label-code text-tertiary font-bold">12 Decks</span>
+</div>
+<!-- Section B -->
+<div class="p-2.5 rounded-xl bg-surface-container-low flex items-center justify-between hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-2.5">
+<span class="w-6 h-6 rounded-md bg-tertiary/10 text-tertiary flex items-center justify-center font-label-code text-label-code font-bold">02</span>
+<div>
+<span class="font-label-meta text-label-meta font-bold text-on-surface block leading-tight">NCSM Mock Tests</span>
+<span class="font-label-code text-label-code text-telemetry-muted">Full-length timed examinations (Mock 01 to 04)</span>
+</div>
+</div>
+<span class="font-label-code text-label-code px-1.5 py-0.5 rounded bg-surface-container-highest text-on-surface font-bold">4 Live</span>
+</div>
+<!-- Section C -->
+<div class="p-2.5 rounded-xl bg-surface-container-low flex items-center justify-between hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-2.5">
+<span class="w-6 h-6 rounded-md bg-tertiary/10 text-tertiary flex items-center justify-center font-label-code text-label-code font-bold">03</span>
+<div>
+<span class="font-label-meta text-label-meta font-bold text-on-surface block leading-tight">Allied State Mock Series</span>
+<span class="font-label-code text-label-code text-telemetry-muted">SSC, WBPSC &amp; Railway integrated mock pool</span>
+</div>
+</div>
+<span class="font-label-code text-label-code text-tertiary font-bold">24 Tests</span>
+</div>
+</div>
+</div>
+<!-- Action Button -->
+<div class="mt-space-md pt-space-xs">
+<button class="w-full py-3 px-4 rounded-xl bg-tertiary text-on-tertiary font-label-meta text-label-meta uppercase tracking-wider font-semibold shadow-md hover:bg-tertiary/95 active:scale-[0.99] transition-all flex items-center justify-center gap-2" type="button">
+<span class="material-symbols-outlined text-[1.25rem]">menu_book</span>
+<span>Open NCSM Portal</span>
+</button>
+<div class="flex items-center justify-between text-telemetry-muted font-label-code text-label-code mt-2 px-1">
+<span>Official Syllabus Aligned</span>
+<span class="text-tertiary font-bold">Science &amp; Tech Focus</span>
+</div>
+</div>
+</div>
+</div>
+<!-- 4. SECONDARY SECTION: LIVE MOCK TEST, RESUME WIDGET, WEAK AREA RADAR -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg mb-space-lg">
+<!-- LEFT SUB-SECTION (7 COLS): LIVE MOCK + RESUME SESSION -->
+<div class="lg:col-span-7 flex flex-col gap-space-lg">
+<!-- Live Mock Test Schedule & Upcoming All-India Rankers Test -->
+<div class="bg-surface-container-lowest rounded-2xl shadow-sm p-space-lg relative overflow-hidden">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-2">
+<span class="flex h-3 w-3 relative">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-error opacity-75"></span>
+<span class="relative inline-flex rounded-full h-3 w-3 bg-error"></span>
+</span>
+<span class="font-label-code text-label-code uppercase tracking-wider text-error font-bold">Live National Event</span>
+</div>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-code text-label-code font-bold">
+              ₹0 FREE ENTRY
+            </span>
+</div>
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-md mt-space-xs">
+<div>
+<h3 class="font-headline-md text-headline-md font-bold text-on-surface">
+                All-India Mega Mock #08
+              </h3>
+<p class="font-body-sm text-body-sm text-telemetry-muted mt-0.5">
+                Exact NTA pattern for SSC CGL Tier 1 • Real-time percentile &amp; solution analysis.
+              </p>
+</div>
+<!-- Live Countdown Box -->
+<div class="bg-inverse-surface text-inverse-on-surface px-space-md py-space-xs rounded-xl flex items-center gap-space-sm self-start sm:self-auto shadow-sm">
+<span class="material-symbols-outlined text-primary-fixed text-[1.25rem]">timer</span>
+<div class="flex flex-col">
+<span class="font-label-code text-label-code text-telemetry-muted uppercase">Starts In</span>
+<span class="font-display-lg text-headline-md font-bold tracking-tight text-inverse-on-surface" id="liveCountdown">
+                  14h 28m 10s
+                </span>
+</div>
+</div>
+</div>
+<!-- Schedule Metrics -->
+<div class="grid grid-cols-3 gap-2 mt-space-md p-space-sm rounded-xl bg-surface-cockpit">
+<div class="flex flex-col">
+<span class="font-label-code text-label-code text-telemetry-muted uppercase">Window</span>
+<span class="font-label-meta text-label-meta font-bold text-on-surface">Sunday 10:00 AM</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-code text-label-code text-telemetry-muted uppercase">Enrolled</span>
+<span class="font-label-meta text-label-meta font-bold text-secondary">12,400 Aspirants</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-code text-label-code text-telemetry-muted uppercase">Format</span>
+<span class="font-label-meta text-label-meta font-bold text-on-surface">100 Qs • 60 Mins</span>
+</div>
+</div>
+<div class="flex items-center justify-between mt-space-md gap-space-sm">
+<div class="flex items-center -space-x-2">
+<img class="w-7 h-7 rounded-full object-cover ring-2 ring-surface-container-lowest" data-alt="Candidate avatar portrait of smiling male engineering student against neutral backdrop" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBKsKvqZ30D7mFQSqigfjzRMhMj3mUOhTb4WGq9K0Ijec6lsk3rk-TnZMjU7sIY8KGamqkQcpn06x6McEbG3-FJlnaCrQ_xAEyP8xXHKSbQPvjnUlU36S-cJmckr1cAJw4I_-3dsgfJg9EkWKwwMWbLPDZ3H_fuY69QkasIW8rImwDRtWVfQ-O4DeE0YEESb6QUMBl66ef51m3HflfuBA2oi1SZoTm-CSnv90vGtI"/>
+<img class="w-7 h-7 rounded-full object-cover ring-2 ring-surface-container-lowest" data-alt="Candidate avatar portrait of young woman with spectacles looking focused in library setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCtnNJfBt97kXbl1zfXSPsu5pjRnVGqxxAVt19Q4O0srHI3r1WFZZJtYr0hHgpE0MycM0a2B3Jor4yBENeoub6dj-qHtuI7QtgtLjJOyYCrCG_ZaLwCulj_mBlcTPAPTcZFEQ5Sdwt8u3T3bBTjKDRJUENIm-oCnkUQ0mx8lB5eKQWW6digAKhmdAQUj94QlOFlZcpGXf0fAy9TPB7iw6QxIcKkj-kOR6BH9ykT04"/>
+<img class="w-7 h-7 rounded-full object-cover ring-2 ring-surface-container-lowest" data-alt="Candidate avatar portrait of young professional student in blue shirt smiling outdoors" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFiOW-mz47gx28cfEAfTNB56d9c9k1lkw_J-qOcvCf5WUe9pm4id6e2ZuvNGq72KBb_LXOTG68fjTjaxY50GfuxeusAmEpADAZAs4uAt9S0k3HzQRVETVHMAOrjwIrAydgnWwDluxYcrmyQqXBOaEcsas1k1yRJbr7kjHF3sQ8YU0tISOa53qFOkaHpaHdcvyvzHeeImx1UeeoBs4TzbLPwSh0GCKjjoGJoPqIMPg"/>
+<span class="w-7 h-7 rounded-full bg-surface-container-high text-on-surface font-label-code text-[10px] font-bold flex items-center justify-center ring-2 ring-surface-container-lowest">+12k</span>
+</div>
+<button class="px-space-md py-2.5 rounded-xl bg-primary-container text-on-primary-container font-label-meta text-label-meta uppercase tracking-wider font-semibold hover:bg-primary transition-colors flex items-center gap-1.5 shadow-sm" id="enrollBtn" onclick="toggleEnroll(this)" type="button">
+<span class="material-symbols-outlined text-[1.125rem]">how_to_reg</span>
+<span id="enrollText">Reserve Free Seat</span>
+</button>
+</div>
+</div>
+<!-- Recent Practice History & Quick Resume Widget -->
+<div class="bg-surface-container-lowest rounded-2xl shadow-sm p-space-md flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-xs">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[1.25rem]">history</span>
+<span class="font-headline-md text-headline-md font-semibold text-on-surface">Quick Resume</span>
+</div>
+<span class="font-label-code text-label-code text-telemetry-muted">Paused 24 mins ago</span>
+</div>
+<div class="p-space-sm rounded-xl bg-surface-cockpit flex flex-col sm:flex-row sm:items-center justify-between gap-space-md">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-label-meta text-label-meta font-bold text-on-surface">SSC CGL Tier-1 Sectional: Quantitative Aptitude</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-code text-label-code font-bold">Algebra &amp; Trig</span>
+</div>
+<div class="flex items-center gap-3 mt-1 text-telemetry-muted font-label-code text-label-code">
+<span>Progress: <strong class="text-on-surface">14 of 30 Answered</strong></span>
+<span>•</span>
+<span>Time Remaining: <strong class="text-on-surface">18m 42s</strong></span>
+</div>
+<!-- Progress bar -->
+<div class="w-full bg-surface-container-high h-2 rounded-full overflow-hidden mt-2 max-w-md">
+<div class="bg-secondary h-full rounded-full w-[46.6%]"></div>
+</div>
+</div>
+<button class="px-space-md py-2.5 rounded-xl bg-secondary text-on-secondary font-label-meta text-label-meta font-semibold uppercase tracking-wider hover:bg-secondary/90 transition-colors flex items-center justify-center gap-1.5 whitespace-nowrap shadow-sm self-start sm:self-auto" type="button">
+<span class="material-symbols-outlined text-[1.125rem]">play_arrow</span>
+<span>Resume (Q14/30)</span>
+</button>
+</div>
+</div>
+</div>
+<!-- RIGHT SUB-SECTION (5 COLS): WEAK AREA DIAGNOSTIC & ACCURACY RADAR -->
+<div class="lg:col-span-5 flex flex-col">
+<div class="bg-surface-container-lowest rounded-2xl shadow-sm p-space-lg flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-nta-not-answered"></span>
+<h3 class="font-headline-md text-headline-md font-semibold text-on-surface">Weak Area Diagnostic</h3>
+</div>
+<span class="font-label-code text-label-code text-primary font-bold">AI TELEMETRY</span>
+</div>
+<p class="font-body-sm text-body-sm text-telemetry-muted mb-space-md">
+              Targeted recommendations based on your last 10 mock attempts across standard syllabus topics.
+            </p>
+<!-- Inline Diagnostic Performance Chart (SVG Radial Bars) -->
+<div class="flex items-center justify-center py-2">
+<svg class="w-48 h-28 overflow-visible" viewbox="0 0 200 120">
+<!-- Semi-arc gauges for fast diagnostic visual -->
+<path class="text-surface-container-high" d="M 20 100 A 80 80 0 0 1 180 100" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="12"></path>
+<!-- Quantitative 84% -->
+<path class="text-primary" d="M 20 100 A 80 80 0 0 1 180 100" fill="none" stroke="currentColor" stroke-dasharray="251.2" stroke-dashoffset="40" stroke-linecap="round" stroke-width="12"></path>
+<!-- Reasoning 91% inner arc -->
+<path class="text-secondary" d="M 40 100 A 60 60 0 0 1 160 100" fill="none" stroke="currentColor" stroke-dasharray="188.4" stroke-dashoffset="17" stroke-linecap="round" stroke-width="10"></path>
+<!-- GA 62% inner arc -->
+<path class="text-nta-not-answered" d="M 60 100 A 40 40 0 0 1 140 100" fill="none" stroke="currentColor" stroke-dasharray="125.6" stroke-dashoffset="47" stroke-linecap="round" stroke-width="8"></path>
+<text class="font-display-lg fill-current text-on-surface font-bold text-xl" text-anchor="middle" x="100" y="85">81.2%</text>
+<text class="font-label-code fill-current text-telemetry-muted text-[9px] uppercase font-bold" text-anchor="middle" x="100" y="100">Avg Competence</text>
+</svg>
+</div>
+<!-- Detailed Breakdown Bars -->
+<div class="flex flex-col gap-space-sm mt-space-xs">
+<!-- Subject 1: Quantitative -->
+<div class="flex flex-col gap-1 p-2 rounded-xl bg-surface-cockpit">
+<div class="flex items-center justify-between font-label-meta text-label-meta">
+<span class="font-semibold text-on-surface">Quantitative Aptitude</span>
+<span class="font-label-code text-label-code font-bold text-primary">84% Accuracy</span>
+</div>
+<div class="w-full bg-surface-container-high h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full w-[84%]"></div>
+</div>
+<span class="font-label-code text-label-code text-telemetry-muted text-[11px]">Strong in Arithmetic; Revise Mensuration</span>
+</div>
+<!-- Subject 2: General Awareness (Needs revision) -->
+<div class="flex flex-col gap-1 p-2 rounded-xl bg-error-container/40">
+<div class="flex items-center justify-between font-label-meta text-label-meta">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-error text-[1rem]">priority_high</span>
+<span class="font-bold text-on-surface">General Awareness</span>
+</div>
+<span class="font-label-code text-label-code font-bold text-error">62% • Needs Revision</span>
+</div>
+<div class="w-full bg-surface-container-high h-2 rounded-full overflow-hidden">
+<div class="bg-error h-full rounded-full w-[62%]"></div>
+</div>
+<span class="font-label-code text-label-code text-on-error-container text-[11px] font-semibold">Underperforming in Modern History &amp; Current Affairs</span>
+</div>
+<!-- Subject 3: English Comprehension -->
+<div class="flex flex-col gap-1 p-2 rounded-xl bg-surface-cockpit">
+<div class="flex items-center justify-between font-label-meta text-label-meta">
+<span class="font-semibold text-on-surface">English Comprehension</span>
+<span class="font-label-code text-label-code font-bold text-tertiary">88% Accuracy</span>
+</div>
+<div class="w-full bg-surface-container-high h-2 rounded-full overflow-hidden">
+<div class="bg-tertiary h-full rounded-full w-[88%]"></div>
+</div>
+<span class="font-label-code text-label-code text-telemetry-muted text-[11px]">Good Vocabulary; Practice Cloze Test Speed</span>
+</div>
+<!-- Subject 4: General Intelligence & Reasoning -->
+<div class="flex flex-col gap-1 p-2 rounded-xl bg-surface-cockpit">
+<div class="flex items-center justify-between font-label-meta text-label-meta">
+<span class="font-semibold text-on-surface">Reasoning &amp; Logic</span>
+<span class="font-label-code text-label-code font-bold text-secondary">91% High Mastery</span>
+</div>
+<div class="w-full bg-surface-container-high h-2 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full w-[91%]"></div>
+</div>
+<span class="font-label-code text-label-code text-telemetry-muted text-[11px]">Mastery tier; Average time 42s per question</span>
+</div>
+</div>
+</div>
+<!-- Bottom Action in Diagnostic -->
+<div class="mt-space-md pt-space-xs">
+<button class="w-full py-2.5 px-3 rounded-xl bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-meta text-label-meta font-semibold transition-colors flex items-center justify-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[1.125rem]">auto_fix_high</span>
+<span>Generate Weak Topic Drill (GA Focus)</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Quick Notification Snack / Cockpit System Footer Status -->
+<div class="p-space-sm rounded-xl bg-surface-container-lowest shadow-sm flex flex-col sm:flex-row items-center justify-between gap-space-sm">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-nta-answered"></span>
+<span class="font-label-code text-label-code text-telemetry-muted uppercase">SYSTEM ENGINE:</span>
+<span class="font-label-meta text-label-meta font-bold text-on-surface">TCS-iON 2026 Simulation Server Synced</span>
+</div>
+<div class="flex items-center gap-4 text-telemetry-muted font-label-code text-label-code">
+<span>Latency: <strong class="text-nta-answered">18ms</strong></span>
+<span>•</span>
+<span>Test Server: <strong class="text-on-surface">Kolkata / IN-EZ-01</strong></span>
+<span>•</span>
+<button class="text-primary font-bold hover:underline" type="button">Diagnostics Log</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Inline micro-interaction script -->
+<script>
+  let selectedCount = 20;
+  let selectedDiff = 'Medium';
+  let isEnrolled = false;
+
+  function setCount(count, el) {
+    selectedCount = count;
+    const parent = document.getElementById('quickTestCountGroup');
+    Array.from(parent.children).forEach(btn => {
+      btn.className = 'py-1.5 rounded-lg bg-surface-container-lowest text-on-surface font-label-code text-label-code font-bold text-center hover:bg-surface-container-high transition-colors';
+    });
+    el.className = 'py-1.5 rounded-lg bg-primary-container text-on-primary-container font-label-code text-label-code font-bold text-center';
+  }
+
+  function setDiff(diff, el) {
+    selectedDiff = diff;
+    const parent = document.getElementById('quickTestDiffGroup');
+    Array.from(parent.children).forEach(btn => {
+      btn.className = 'py-1 rounded-lg bg-surface-container-lowest text-on-surface font-label-code text-label-code font-bold hover:bg-surface-container-high transition-colors';
+    });
+    if (diff === 'Easy') {
+      el.className = 'py-1 rounded-lg bg-surface-container-highest text-nta-answered font-label-code text-label-code font-bold';
+    } else if (diff === 'Medium') {
+      el.className = 'py-1 rounded-lg bg-surface-container-highest text-secondary font-label-code text-label-code font-bold';
+    } else {
+      el.className = 'py-1 rounded-lg bg-surface-container-highest text-nta-not-answered font-label-code text-label-code font-bold';
+    }
+  }
+
+  function startInstantMock() {
+    const subj = document.getElementById('quickSubjectSelect').value;
+    const isInstantMode = document.getElementById('instantModeToggle').checked;
+    alert(`⚡ Launching Instant Drill:\n• ${selectedCount} Questions\n• Difficulty: ${selectedDiff}\n• Pool: ${subj}\n• Immediate Solutions: ${isInstantMode ? 'ENABLED' : 'DISABLED'}`);
+  }
+
+  function selectCompetitiveTab(tab) {
+    if (tab === 'practice') {
+      alert('Routing to Topic & Exam-wise practice repository (SSC, RRB, WBCS)...');
+    } else {
+      alert('Routing to Verified PYQ Papers Archive (2023 - 2026 Shift Papers)...');
+    }
+  }
+
+  function toggleEnroll(btn) {
+    isEnrolled = !isEnrolled;
+    const textEl = document.getElementById('enrollText');
+    if (isEnrolled) {
+      btn.className = 'px-space-md py-2.5 rounded-xl bg-nta-answered text-white font-label-meta text-label-meta uppercase tracking-wider font-semibold transition-colors flex items-center gap-1.5 shadow-sm';
+      textEl.innerText = 'Seat Confirmed (Roll #84102)';
+    } else {
+      btn.className = 'px-space-md py-2.5 rounded-xl bg-primary-container text-on-primary-container font-label-meta text-label-meta uppercase tracking-wider font-semibold hover:bg-primary transition-colors flex items-center gap-1.5 shadow-sm';
+      textEl.innerText = 'Reserve Free Seat';
+    }
+  }
+
+  // Live countdown ticker simulator
+  let totalSeconds = 14 * 3600 + 28 * 60 + 10;
+  const countdownEl = document.getElementById('liveCountdown');
+  if (countdownEl) {
+    setInterval(() => {
+      if (totalSeconds > 0) {
+        totalSeconds--;
+        const h = Math.floor(totalSeconds / 3600);
+        const m = Math.floor((totalSeconds % 3600) / 60);
+        const s = totalSeconds % 60;
+        countdownEl.innerText = `${h}h ${m < 10 ? '0' : ''}${m}m ${s < 10 ? '0' : ''}${s}s`;
+      }
+    }, 1000);
+  }
+</script></main></div></body></html>
